@@ -43,15 +43,34 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T17:26:44.731Z  
+**Submitted:** 2026-10-12T17:26:58.510Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int dig;
+        int rev = 0;
+
+        while (N != 0) {
+            dig = N % 10;
+            rev = rev * 10 + dig;
+            N = N / 10;
+        }
+
+        cout << rev << endl;
+    }
+
+    return 0;
 }
 
 ```
